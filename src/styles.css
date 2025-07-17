@@ -1,0 +1,44 @@
+/* App layout */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 5 rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: sli;
+}
+
+/* Card style */
+.card {
+  background: linear-gradient(104.04deg, #ffe79b 0%, #ffb81e 100%);
+  border-radius: 20px;
+  padding: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+
+  /* Center content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /* Card sizing */
+  min-height: 100px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Optional: Make text scale better on smaller screens */
+@media (max-width: 600px) {
+  .card {
+    font-size: 14px;
+    padding: 1rem;
+  }
+}

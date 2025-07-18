@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-// ✅ Define the type of data from the API
+
 export type Todo = {
   userId: number;
   id: number;
@@ -12,7 +12,7 @@ const useTodos = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [loading, setLoading] = useState(true);
 
-  // ✅ Fetching API using fetch()
+  
   useEffect(() => {
     const fetchTodos = async () => {
       try {
@@ -20,8 +20,8 @@ const useTodos = () => {
           "https://jsonplaceholder.typicode.com/todos/"
         );
         const data = await response.json();
-        setTodos(data); // Save the data to state
-        setLoading(false); // Turn off loading
+        setTodos(data); 
+        setLoading(false); 
       } catch (error) {
         console.error("Fetch error:", error);
         setLoading(false);

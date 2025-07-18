@@ -1,6 +1,6 @@
 import React from "react";
 import useTodos from "./useTodos";
-import "./styles.css"; // Make sure this exists or use inline styles
+import "./styles.css"; 
 
 function App() {
   const { todos, loading } = useTodos();
